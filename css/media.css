@@ -1,0 +1,131 @@
+/* 
+1200px - container = max-width: 970px;
+992px - container = max-width: 750px;
+768px - container = max-width: unset;
+576px - container = max-width: unset;
+475px - container = max-width: unset;
+375px - container = max-width: unset;
+320px - container = max-width: unset;
+*/
+
+@media (max-width:1200px) {
+    .container {
+        max-width: 970px;
+    }
+
+    .serials__items {
+        grid-template-columns: repeat(5, 540px);
+        grid-auto-rows: 404px;
+        overflow: hidden;
+        overflow-x: auto;
+    }
+
+    .serials__item:nth-of-type(1) {
+        grid-column: unset;
+        grid-row: unset;
+        flex-shrink: 1;
+        width: 100%;
+        height: 100%;
+    }
+
+    .serials__item {
+        flex-shrink: 1;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (max-width:992px) {
+    .container {
+        max-width: 750px;
+    }
+
+    .cartoons {
+        background: rgba(255, 255, 255, 0.6);
+    }
+
+    .cartoons__bg {
+        width: 100%;
+    }
+}
+
+@media (max-width:768px) {
+    .container {
+        max-width: unset;
+    }
+
+    .header-nav__content {
+        flex-direction: column;
+    }
+
+    .header-nav__logo {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+        row-gap: 4px;
+    }
+
+    .intro__content {
+        align-items: center;
+    }
+
+    .intro__title {
+        font-size: 54px;
+    }
+
+    .intro__text {
+        max-width: 470px;
+    }
+
+    .cartoons__content {
+        align-items: center;
+    }
+
+}
+
+@media (max-width:576px) {
+    .intro__title {
+        font-size: 44px;
+    }
+
+    .intro__text {
+        max-width: 370px;
+    }
+}
+
+@media (max-width:475px) {
+    .intro__title {
+        font-size: 34px;
+    }
+
+    .intro__text {
+        max-width: 290px;
+    }
+
+    .intro__links {
+        flex-direction: column;
+        row-gap: 30px;
+    }
+
+    .cartoons__img {
+        width: 345px;
+    }
+}
+
+@media (max-width:375px) {
+    .navbar-nav__list {
+        column-gap: 10px;
+    }
+
+    .intro__title {
+        font-size: 30px;
+    }
+
+    .intro__text {
+        max-width: 220px;
+    }
+
+    .cartoons__img {
+        width: 300px;
+    }
+}
